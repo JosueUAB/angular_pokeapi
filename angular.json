@@ -94,6 +94,13 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "/angular_pokeapi/",
+            "repo": "https://github.com/JosueUAB/angular_pokeapi.git"
+                }
         }
       }
     }

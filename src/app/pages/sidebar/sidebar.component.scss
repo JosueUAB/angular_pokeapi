@@ -1,0 +1,12 @@
+/* sidebar.component.css */
+.sidebar-open {
+  transform: translateX(0);
+}
+
+.sidebar-closed {
+  transform: -translate-x-full;
+}
+
+.transition-transform {
+  transition: transform 0.3s ease-in-out;
+}
