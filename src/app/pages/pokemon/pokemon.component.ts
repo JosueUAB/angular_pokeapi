@@ -13,18 +13,31 @@ import { PokemonService } from '../../../services/pokemon.service';
 })
 export class PokemonComponent {
   serviciosPokemon= inject(PokemonService);
+  personajes:any=[];
+  ngOnInit(): void {
+    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+    //Add 'implements OnInit' to the class.
+    this.loadPokemon();
+  }
 
 
   loadPokemon(){
-    this.serviciosPokemon.getPokemon()
+    for (let i = 1; i < 100; i++) {
+
+      this.serviciosPokemon.getPokemon(i)
     .subscribe({
       next: (resp)=>{
-        console.log(resp);
+        // console.log(resp);
+        this.personajes.push(resp);
+
       },
       error:(err)=>{
         console.log(err);
       }
     })
+
+    }
+
 
   }
 }

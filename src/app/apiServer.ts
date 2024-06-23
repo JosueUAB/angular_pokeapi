@@ -1,3 +1,3 @@
 export const apiServer= {
-  apiUrl:'http://https://pokeapi.co/api/v2/'
+  apiUrl:'https://pokeapi.co/api/v2'
 }

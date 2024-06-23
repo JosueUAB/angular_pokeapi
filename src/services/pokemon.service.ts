@@ -12,12 +12,12 @@ export class PokemonService {
 
    }
 
-   getPokemon(){
-    return this.http.get(`${this.apiURL}`);
+   getPokemon(index:number){
+    return this.http.get(`${this.apiURL}/pokemon/${index}`);
    }
 
 
-   
+
 
 
 }
